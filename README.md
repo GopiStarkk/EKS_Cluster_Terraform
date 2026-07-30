@@ -1,51 +1,67 @@
-# Amazon EKS Platform using Terraform
+# Terraform AWS EKS Platform
 
-## Project Overview
+## Overview
 
-This repository provisions a production-ready Amazon EKS platform using Terraform.
+This repository provisions a production-ready Amazon Elastic Kubernetes Service (Amazon EKS) platform using Terraform.
 
-The infrastructure includes
+The solution automates the complete Kubernetes infrastructure lifecycle, including networking, security, IAM, worker nodes, and supporting AWS resources.
 
-- VPC
+---
+
+## Features
+
+- Infrastructure as Code using Terraform
+- Custom VPC
 - Public & Private Subnets
 - NAT Gateway
 - Internet Gateway
-- IAM Roles
+- Route Tables
 - Security Groups
-- EKS Cluster
+- Amazon EKS Cluster
 - Managed Node Groups
+- IAM Roles
+- IAM Policies
 - OIDC Provider
-- CloudWatch Logging
+- CloudWatch Logs
 
 ---
 
-## Infrastructure Architecture
+## Technologies
 
-Internet
+Terraform
 
-↓
-
-Application Load Balancer
-
-↓
+AWS
 
 Amazon EKS
 
-↓
+IAM
 
-Worker Nodes
+VPC
 
-↓
+CloudWatch
 
-Pods
+GitHub
 
-↓
+Jenkins
 
-Amazon ECR
+Helm
+
+kubectl
+
+AWS CLI
 
 ---
 
-## Terraform Workflow
+## Repository Structure
+
+(terraform/
+modules/
+docs/
+README.md)
+
+---
+
+## Deployment Workflow
 
 terraform init
 
@@ -60,6 +76,10 @@ terraform plan
 ↓
 
 terraform apply
+
+↓
+
+Amazon EKS Ready
 
 ↓
 
