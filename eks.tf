@@ -24,7 +24,7 @@ module "eks" {
   # EKS Managed Node Group(s)
   eks_managed_node_group_defaults = {
     ami_type       = "AL2023_x86_64_STANDARD"
-    instance_types = ["m5.large"]
+    instance_types = ["m7i-flex.large"]
 
     attach_cluster_primary_security_group = true
   }
@@ -35,7 +35,7 @@ module "eks" {
       max_size     = 2
       desired_size = 1
 
-      instance_types = ["t2.medium"]
+      instance_types = ["t3.small"]
       capacity_type  = "SPOT"
 
       tags = {
